@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'cybero';
-    src: url('/assets/fonts/cybero.ttf');
+    src: url('../assets/fonts/cybero.ttf');
 }
 :root{
   --color-primary-background:#170051;
@@ -15,12 +15,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 body{
     /* height: 200vh; */
     width: 100%;
     overflow-x: hidden;
     font-size: 16px;
+    background-color: #131313;
 
 }
 .container{
@@ -42,7 +44,7 @@ body{
 .layer{
 position: absolute;
 }
-img{
+.layer img{
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -51,13 +53,13 @@ img{
 .layer:nth-child(2){
     /* background-color: aqua; */
     /* display: flex; */
-    margin-left: 30rem;
+    margin-left: 60rem;
 }
 
 .space{
     aspect-ratio: 960/540;
     width: 100%;
-    height: auto;
+    /* height: auto; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -69,12 +71,12 @@ img{
 .cards{
     /* height: 100vh; */
     width: 100vw;
-    background-image: radial-gradient(circle, #170051, #150943, #140e33, #151124, #131313);  
+    /* background-image: radial-gradient(circle, #170051, #150943, #140e33, #151124, #131313);   */
    
 
 }
 .cards{
-    z-index: -1;
+    z-index: 5;
     position: absolute;
 
     top: 100%;
@@ -92,10 +94,7 @@ img{
     width: 100%;
     height: 6rem;
     background-color: #1D1D1D;
-    /* background-image: url('../assets/img/planets/bg_jupiter2.jpg');
-    background-repeat: no-repeat;
-    background-position: center; */
-    
+
     display: flex;
     justify-content: start;
     align-items: center;
@@ -104,17 +103,25 @@ img{
 .card{
     
     /* position: absolute; */
-    top: 20rem;
-    overflow: hidden;
+    /* top: 20rem; */
+    /* overflow: hidden; */
     /* background-color: var(--color-tertiary-background); */
     color: var(--color-primary-text);
-    border: 1px solid var(--color-secondary-background);
+    /* border: 2px solid rgba(255, 255, 255,.1); */
     border-radius: 5px;
     /* height: 10rem; */
     text-align: center;
-    width: 20rem;
-    height: 25rem;
+    width: 50%;
+    height: 30rem;
+    display: flex;
+    position: relative;
+    margin-bottom: 5rem;
+
 }
+.card .card__bg, .card-text{
+    width: 50%;
+}
+
 .card h1{
     font-family: 'cybero';
     font-size: 3.5rem;
@@ -122,10 +129,65 @@ img{
 .card p{
     font-size: 0.5rem;
 }
-.card img{
+.card-text{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 150;
+}
+.card-text h2{
+    font-size: 4rem;
+    font-family: 'cybero';
+}
+.card .card-link-info{
+    display: flex;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+.card-link-info img{
+   height: 3rem;
+    object-fit: cover;
+}
+.card-link-info a img{
+    transition: 0.5s ease;
+}
+.card-link-info a:hover img{
+    transform : scale(1.2);
+ }
+.card-link-info p{
+    font-size: 1.5rem;
+    font-family: 'cybero';
+    color: var(--color-primary-text);
+
+}
+.card__bg{
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+}
+.card__bg img{
+   width: 85%;
+   object-fit: cover;
+   object-position: top ;
+}
+.card__bg::after{
+
+    content: '';
+    color: white;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    
+    background-image: linear-gradient(to right, rgba(19,19,19,1) 20%,
+                                                 rgba(19,19,19,.75) 40%,
+                                                rgba(19,19,19,.5) 60%,
+                                                rgba(19,19,19,.1) 80%,
+                                                rgba(19,19,19,0) 100% );
+    right: 0;
 }
 .card-info h2{
     letter-spacing: 5px;
@@ -133,13 +195,13 @@ img{
     padding-right: 5rem;
     width: 100%;
     /* background-color: black; */
-    color: var(--color-primary-text);
+    color: var(--color-secondary-background);
     font-family: 'cybero';
     font-size: 4rem;
     line-height: 2rem;
     /* text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #D851E7 0px 0px 20px, #D851E7 0px 0px 30px, #D851E7 0px 0px 40px, #D851E7 0px 0px 50px, #D851E7 0px 0px 75px, 2px 2px 2px rgba(206,89,55,0); */
 
-    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px var(--color-secondary-background), 0 -10px 20px #D851E7, 0 -18px 40px #D851E7;
+    /* text-shadow: 0 -1px 4px #FFF, 0 -2px 10px var(--color-secondary-background), 0 -10px 20px #D851E7, 0 -18px 40px #D851E7; */
 }
 .card-info-subtitle h3{
     
@@ -163,4 +225,13 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+canvas{
+    /* background-color: purple; */
+    height: 85%;
+    width: 100%;
+}
+/* EFFECT 360 */
+input{
+    width: 90%;
 }
