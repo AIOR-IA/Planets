@@ -18,7 +18,6 @@
     user-select: none;
 }
 body{
-    /* height: 200vh; */
     width: 100%;
     overflow-x: hidden;
     font-size: 16px;
@@ -48,11 +47,8 @@ position: absolute;
     width: 100%;
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
 }
 .layer:nth-child(2){
-    /* background-color: aqua; */
-    /* display: flex; */
     margin-left: 60rem;
 }
 
@@ -69,11 +65,7 @@ position: absolute;
     
 }
 .cards{
-    /* height: 100vh; */
     width: 100vw;
-    /* background-image: radial-gradient(circle, #170051, #150943, #140e33, #151124, #131313);   */
-   
-
 }
 .cards{
     z-index: 5;
@@ -96,20 +88,19 @@ position: absolute;
     background-color: #1D1D1D;
 
     display: flex;
-    justify-content: start;
     align-items: center;
-    flex-wrap: wrap;
+}
+.left{
+    flex-direction: row;
+    justify-content: start;
+}
+.right{
+    flex-direction: row-reverse;
+    justify-content: end;
 }
 .card{
-    
-    /* position: absolute; */
-    /* top: 20rem; */
-    /* overflow: hidden; */
-    /* background-color: var(--color-tertiary-background); */
     color: var(--color-primary-text);
-    /* border: 2px solid rgba(255, 255, 255,.1); */
     border-radius: 5px;
-    /* height: 10rem; */
     text-align: center;
     width: 50%;
     height: 30rem;
@@ -118,6 +109,7 @@ position: absolute;
     margin-bottom: 5rem;
 
 }
+
 .card .card__bg, .card-text{
     width: 50%;
 }
@@ -158,6 +150,9 @@ position: absolute;
 .card-link-info a:hover img{
     transform : scale(1.2);
  }
+ .card-link-info{
+    padding-top: 2rem;
+ }
 .card-link-info p{
     font-size: 1.5rem;
     font-family: 'cybero';
@@ -165,19 +160,17 @@ position: absolute;
 
 }
 .card__bg{
-    /* background-color: red; */
     display: flex;
-    justify-content: flex-end;
 }
+
 .card__bg img{
    width: 85%;
    object-fit: cover;
    object-position: top ;
 }
-.card__bg::after{
+.right-background::after{
 
     content: '';
-    color: white;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -189,19 +182,66 @@ position: absolute;
                                                 rgba(19,19,19,0) 100% );
     right: 0;
 }
+.right-background{
+    justify-content: flex-end;
+}
+.left-background::after{
+
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    
+    background-image: linear-gradient(to left, rgba(19,19,19,1) 20%,
+                                                 rgba(19,19,19,.75) 40%,
+                                                rgba(19,19,19,.5) 60%,
+                                                rgba(19,19,19,.1) 80%,
+                                                rgba(19,19,19,0) 100% );
+    left: 0;
+}
+.left-background{
+    justify-content: flex-start;
+}
+.planet-mercury img{
+    width: 85%;
+    object-fit: cover;
+    object-position: top;
+}
+.planet-earth img{
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+.planet-mars img{
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+.planet-saturn img{
+    width: 85%;
+    object-fit: cover;
+    object-position: bottom;
+}
+.planet-uranus img{
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
+.planet-neptune img{
+    width: 85%;
+    object-fit: cover;
+    object-position: center;
+}
 .card-info h2{
     letter-spacing: 5px;
     padding-left: 5rem;
     padding-right: 5rem;
     width: 100%;
-    /* background-color: black; */
     color: var(--color-secondary-background);
     font-family: 'cybero';
     font-size: 4rem;
     line-height: 2rem;
-    /* text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #D851E7 0px 0px 20px, #D851E7 0px 0px 30px, #D851E7 0px 0px 40px, #D851E7 0px 0px 50px, #D851E7 0px 0px 75px, 2px 2px 2px rgba(206,89,55,0); */
-
-    /* text-shadow: 0 -1px 4px #FFF, 0 -2px 10px var(--color-secondary-background), 0 -10px 20px #D851E7, 0 -18px 40px #D851E7; */
+    text-shadow: 0 0 3.5rem var(--color-secondary-background);   
 }
 .card-info-subtitle h3{
     
@@ -226,12 +266,59 @@ position: absolute;
     flex-direction: column;
     justify-content: center;
 }
+.card-info-detail{
+    display: flex;
+}
 canvas{
-    /* background-color: purple; */
     height: 85%;
     width: 100%;
 }
 /* EFFECT 360 */
 input{
     width: 90%;
+}
+@media only screen and (max-width:1500px) {
+    canvas{
+        height: 60%;
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1400px) {
+    .card-info{
+        height: 5rem;
+    }
+    .card-info h2{
+        letter-spacing: 6px;
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+    .card-info-subtitle h3{
+    
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+    .card-info-subtitle p{
+        font-size: .9rem;
+    }
+    .card-info-subtitle{
+        height: 5rem;
+    }
+}
+@media only screen and (max-width:1200px) {
+    .card-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 10rem;
+    }
+    .card-info h2{
+        height: 5rem;
+        line-height: 5rem;
+    }
+    .card-info-subtitle{
+        border:0.05rem solid rgba(173, 173, 173,0.2);
+        
+        border-bottom:0px solid transparent;
+    }
 }
