@@ -33,7 +33,7 @@ body{
     position: relative;
     width: 100%;
     overflow: hidden;
-    background: url('../assets/img-parallax/bg.png');
+    background: url('../assets/img-parallax/bg.jpg');
     background-attachment: scroll;
 
     background-size: cover;
@@ -367,6 +367,26 @@ input{
     canvas{
         height: 20rem;
         width: 25rem;
+    }
+    li:nth-child(1){
+        opacity: 0;
+        display: none !important;
+    }
+    li:nth-child(2){
+        opacity: 0;
+        display: none;
+    }
+    li:nth-child(4){
+        opacity: 0;
+        display: none;
+    }
+    li:nth-child(5){
+        opacity: 0;
+        display: none;
+    }
+    li:nth-child(6){
+        opacity: 0;
+        display: none;
     }
 
 }
