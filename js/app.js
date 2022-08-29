@@ -76,7 +76,8 @@ window.addEventListener('load', pageLoaded)
 function pageLoaded() {
   for (let i = 1; i <=22; i += 1) {
     const number = i.toString().padStart(2, '00')
-    const url = `../assets/img/Planet-360/${number}.png`
+    // const url2 = `../assets/img/Planet-360/${number}.png`
+    const url = `/Planets/assets/img/Planet-360/${number}.png`
     const image1 = new Image()
     const image2 = new Image()
     const image3 = new Image()
