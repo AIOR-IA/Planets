@@ -1,7 +1,6 @@
 window.onload = function() {
   let loading = document.querySelector('.loading');
   let container = document.querySelector('.container');
-  container.style.visibility = 'hidden';
   document.body.classList.add('no-scroll');
   setTimeout(function() {
     loading.style.opacity = '0';
