@@ -1,3 +1,20 @@
+window.onload = function() {
+  let loading = document.querySelector('.loading');
+  let container = document.querySelector('.container');
+  document.body.classList.add('no-scroll');
+  setTimeout(function() {
+    loading.style.opacity = '0';
+    loading.style.visibility = 'hidden';
+    container.style.opacity = '1';
+    container.style.visibility = 'visible';
+    setTimeout(function() {
+      loading.remove();
+      document.body.classList.remove('no-scroll');
+    }, 400);
+  }, 2500);
+
+};
+
 let moon = document.getElementById('moon');
 
 window.addEventListener('scroll',function(){

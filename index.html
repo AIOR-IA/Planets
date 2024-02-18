@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/e1f308f6f8.js"></script>
 </head>
 <body>
+    <div class="loading">
+        <p>- Loading -</p>
+        <img src="assets/img/person.png" alt="person.png">
+    </div>
     <div class="container" id="Home" >
         <ul id="scene">
             <li class="layer" data-depth="0.10"><img src="assets/img-parallax/img-2.png" alt=""></li>
@@ -53,7 +60,7 @@
             </div>
             </div>
             <div class="card__bg planet-mercury right-background">
-                <img src="assets/img/planets/bg_mercury.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_mercury.jpg" alt="">
             </div>
        </div>
        <div class="card-info right">
@@ -79,7 +86,7 @@
         </div>
         <div class="card">
             <div class="card__bg left-background">
-                <img src="assets/img/planets/bg_venus2.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_venus2.jpg" alt="">
             </div>
             <div class="card-text">
                 <canvas id="canvas2" ></canvas>
@@ -122,7 +129,7 @@
                     </div>
                 </div>
                 <div class="card__bg planet-earth right-background">
-                    <img src="assets/img/planets/bg_earth.jpg" alt="">
+                    <img loading="lazy" src="assets/img/planets/bg_earth.jpg" alt="">
                 </div>
         </div>
         <div class="card-info right">
@@ -147,7 +154,7 @@
         </div>
         <div class="card">
             <div class="card__bg planet-mars left-background">
-                <img src="assets/img/planets/bg_mars.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_mars.jpg" alt="">
             </div>
                 <div class="card-text">
                     <canvas id="canvas4" ></canvas>
@@ -188,7 +195,7 @@
                 </div>
             </div>
             <div class="card__bg right-background">
-                <img src="assets/img/planets/bg_jupiter2.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_jupiter2.jpg" alt="">
             </div>
         </div>
         <div class="card-info right">
@@ -213,7 +220,7 @@
         </div>
         <div class="card">
             <div class="card__bg planet-saturn left-background">
-                <img src="assets/img/planets/bg_saturn2.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_saturn2.jpg" alt="">
             </div>
             <div class="card-text">
                 <canvas id="canvas6" ></canvas>
@@ -254,7 +261,7 @@
                 </div>
             </div>
             <div class="card__bg planet-uranus right-background">
-                <img src="assets/img/planets/bg_uranus.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_uranus.jpg" alt="">
             </div>
         </div>
         <div class="card-info right">
@@ -279,7 +286,7 @@
         </div>
         <div class="card last-card">
             <div class="card__bg planet-neptune left-background">
-                <img src="assets/img/planets/bg_neptuno.jpg" alt="">
+                <img loading="lazy" src="assets/img/planets/bg_neptuno.jpg" alt="">
             </div>
             <div class="card-text">
                 <canvas id="canvas8" ></canvas>
