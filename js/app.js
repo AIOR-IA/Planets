@@ -2,6 +2,7 @@ window.onload = function() {
   let loading = document.querySelector('.loading');
   let container = document.querySelector('.container');
   document.body.classList.add('no-scroll');
+  container.style.opacity = '0';
   setTimeout(function() {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
