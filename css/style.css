@@ -40,7 +40,6 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    visibility: hidden;
     transition: opacity 1s linear, visibility 1s linear;
 }
 .layer{
