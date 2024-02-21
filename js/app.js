@@ -8,6 +8,8 @@ window.onload = function() {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
     container.style.opacity = '1';
+    container.style.visibility = 'visible';
+    container.style.display = 'block';
     setTimeout(function() {
       loading.remove();
       document.body.classList.remove('no-scroll');

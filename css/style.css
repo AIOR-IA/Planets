@@ -37,6 +37,8 @@ body{
     background: url('../assets/img-parallax/bg.jpg');
     background-attachment: scroll;
 
+    visibility: hidden;
+    display: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
