@@ -3,7 +3,7 @@ window.onload = function() {
   let container = document.querySelector('.container');
   document.body.classList.add('no-scroll');
   container.style.opacity = '0';
-  container.style.visibility = 'visible';
+  container.style.visibility = 'hidden';
   setTimeout(function() {
     loading.style.opacity = '0';
     loading.style.visibility = 'hidden';
